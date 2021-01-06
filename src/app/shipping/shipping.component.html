@@ -1,0 +1,9 @@
+<h3>Shipping Prices</h3>
+
+<!-- La async pipe es muy interesante ya que se trata de una peticion http
+con lo cual es asincrono y parece que con esto nos quitamos del observable o
+de utilizar .then y tal. INVESTIGAR... -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+    <span>{{ shipping.type }}</span>
+    <span>{{ shipping.price | currency }}</span>
+</div>
